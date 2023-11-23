@@ -1,0 +1,87 @@
+body {
+    background-color: whitesmoke;
+}
+
+#okvir {
+    position: relative;
+    width: 80%;
+    height: 750px;
+    left: 10%;
+    border: 2px solid yellow;
+    background-color: red;
+}
+
+section, nav {
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    border: 2px solid yellow;
+    border-bottom: none;
+    border-left: none;
+}
+
+nav {
+    height: 79.5%;
+    font-size: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px;
+    font-size: 20px;
+    display: block;
+    text-align: left;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #45a049;
+}
+
+nav h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header {
+    position: relative;
+    float: right;
+    bottom: 17%;
+    right: 52%;
+    border: 2px solid blue;
+    text-align: center;
+    width: 25%;
+    height: 14%;
+    font-size: 20px;
+}
+
+aside {
+    
+    position: relative;
+    bottom: 77%;
+    left: 22%;
+    background-color: lime;
+    border: 3px solid yellow;
+    width: 75%;
+    height: 71%;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    header, div, nav, section, aside {
+        width: 100%;
+        position: static;
+    }
+	header{
+	width: 99%;
+	}
+	aside  {
+	height: 850px;
+	}
+}
