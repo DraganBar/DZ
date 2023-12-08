@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Zadatak 3.</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+ var i;
+ var j;
+ var Prost;
+ document.write("Prosti brojevi od 1 do 1000: <br/>");
+ for(i = 1; i < 1000; i++) {
+    Prost = 1;
+    for(j = 2; j < i; j++) {
+        if(i % j == 0) {
+            Prost = 0;
+            break;
+        }
+    }
+    if(Prost) {
+        document.write(i + "<br/>");
+        console.log(i);
+    }
+ }
+ 
+ </script>
+</body>
+</html>

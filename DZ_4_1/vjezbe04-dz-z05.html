@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Zadatak 5.</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    var osoba1 = {
+        firstName: "Marko", 
+        lastName: "Maric", 
+        age: 40, 
+        eyeColor: "black",
+        vrati: function() {
+            return "Prva osoba: <br/>" + "Ime:" + this.firstName + "<br/>" + "Prezime:" + this.lastName + "<br/>" + "Godina:" + this.age + "<br/>"+ "Boja ociju:" + this.eyeColor + "<br/>";
+        }
+    }
+
+    var osoba2 = {
+        firstName: "Ante", 
+        lastName: "Antic", 
+        age: 22, 
+        eyeColor: "brown",
+        vrati: function() {
+            return "<br/>Druga osoba: <br/>" + "Ime:" + this.firstName + "<br/>" + "Prezime:" + this.lastName + "<br/>" + "Godina:" + this.age + "<br/>"+ "Boja ociju:" + this.eyeColor + "<br/>";
+        }
+    }
+    
+    var osoba3 = {
+        firstName: "Petra", 
+        lastName: "Petrovic", 
+        age: 26, 
+        eyeColor: "blue",
+        vrati: function() {
+            return "<br/>Treca osoba: <br/>" + "Ime:" + this.firstName + "<br/>" + "Prezime:" + this.lastName + "<br/>" + "Godina:" + this.age + "<br/>"+ "Boja ociju:" + this.eyeColor + "<br/>";
+        }
+    }
+  
+   var osobe = [osoba1, osoba2, osoba3];
+   var i;
+   
+   for(i = 0; i < osobe.length; i++)
+	{
+		document.write(osobe[i].vrati());
+	}
+	  
+</script>
+</body>
+</html>

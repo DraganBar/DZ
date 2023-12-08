@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Zadatak 11.</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+	var tempDay = ['2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0];
+	var Zbroj_temp = 0;
+	
+	function funkcija(tempDay){
+
+    var Datum = tempDay[0];
+    var Temperature = tempDay.slice(1);
+
+	var Najmanja_temperatura = Temperature[0];
+	var Najveca_temperatura = Temperature[0];
+
+    for (var i = 0; i < Temperature.length; i++){
+    if (Temperature[i] < Najmanja_temperatura){
+        Najmanja_temperatura = Temperature[i];
+		}
+
+    if (Temperature[i] > Najveca_temperatura){
+        Najveca_temperatura = Temperature[i];
+		}
+	}
+
+	for (var i = 0; i < Temperature.length; i++){
+    Zbroj_temp += Temperature[i];
+	}
+	var Prosjecna_temperatura = Zbroj_temp / Temperature.length;
+
+    console.log("Datum: " + Datum);
+	console.log("Najmanja temperatura: " + Najmanja_temperatura);
+    console.log("Najveća temperatura: " + Najveca_temperatura);
+    console.log("Prosječna temperatura: " + Prosjecna_temperatura);
+}
+
+funkcija(tempDay);
+
+ </script>
+</body>
+</html>

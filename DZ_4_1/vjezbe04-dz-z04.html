@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Zadatak 4.</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 
+ var polje = new Array(1,2,3,4,7,8,5,6,9, 55, 12, 4, 85);
+ document.write("Polje: " + polje + "<br/>");
+ document.write("Duzina polja: " + polje.length + "<br/>");
+ 
+ var SortiranoMax = polje.sort((a, b) => b - a);
+ document.write("Sortirano od najveceg do najmanjeg: " + SortiranoMax + "<br/>");
+ 
+ var SortiranoMin = polje.sort((a, b) => a - b);
+ document.write("Sortirano od najmanjeg do najveceg: " + SortiranoMin + "<br/>");
+ 
+ SortiranoMin.pop();
+ document.write("Uklonjen zadnji clan polja: " + SortiranoMin + "<br/>");
+ 
+ SortiranoMin.push('19', '22');
+ document.write("Dva nova člana: " + SortiranoMin + "<br/>");
+ 
+ var polje2 = ["Banana", "Orange", "Apple", "Mango"];
+ var polje_final = polje.concat(polje2);
+ document.write("Spojena polja: " + polje_final);
+ 
+ </script>
+</body>	
+</html>

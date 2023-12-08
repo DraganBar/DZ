@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 9.</title>
+</head>
+<body>
+  <script type="text/javascript">
+  
+	var i;
+	var j;
+	var suma;
+  
+    function Savrsen_broj(broj) {
+      for (i = 1; i <= broj; i++) {
+         suma = 0;
+        for (j = 1; j < i; j++) {
+          if (i % j === 0) {
+            suma = suma + j;
+          }
+        }
+
+        if (suma === i) {
+         console.log(i);
+        }
+      }
+    }
+    Savrsen_broj(1000);
+	
+</script>
+</body>
+</html>
