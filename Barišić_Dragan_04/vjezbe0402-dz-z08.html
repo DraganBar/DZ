@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 8.</title>
+</head>
+<body>
+
+  <input type="text" id="broj1"/>
+  <label for="broj1">operand1</label><br><br>
+  <input type="text" id="broj2"/>
+  <label for="broj2">operand2</label><br><br>
+ 
+
+  <!-- Gumbi za matematičke zadaneOperacije -->
+  <button onclick="zadaneOperacije('zbrajanje')">+</button>
+  <button onclick="zadaneOperacije('oduzimanje')">-</button>
+  <button onclick="zadaneOperacije('mnozenje')">*</button>
+  <button onclick="zadaneOperacije('dijeljenje')">/</button><br><br>
+
+  <!-- Gumbi za trigonometrijske funkcije -->
+  <button onclick="zadaneOperacije('sinus')">sin</button>
+  <button onclick="zadaneOperacije('kosinus')">kos</button>
+  <button onclick="zadaneOperacije('tangens')">tang</button><br><br>
+
+  <!-- Gumbi za logaritamske funkcije -->
+  <button onclick="zadaneOperacije('ln')">ln</button>
+  <button onclick="zadaneOperacije('log')">log</button><br><br>
+
+  <!-- Gumbi za potenciranje -->
+  <button onclick="zadaneOperacije('kvadriranje')">^2</button>
+  <button onclick="zadaneOperacije('kubiranje')">^3</button>
+  <button onclick="zadaneOperacije('potenciranje')">^n</button>
+
+  <!-- Prikaz rezultata -->
+ 
+
+  <script type="text/javascript">
+    function zadaneOperacije(operacija) {
+      
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+
+      
+      if (isNaN(broj1) || isNaN(broj2)) {
+        alert('Unesite ispravne brojeve.');
+        return;
+      }
+
+      var rezultat;
+      switch (operacija) {
+        case 'zbrajanje':
+				rezultat = broj1 + broj2;
+				break;
+        case 'oduzimanje':
+				rezultat = broj1 - broj2;
+				break;
+        case 'mnozenje':
+				rezultat = broj1 * broj2;
+				break;
+        case 'dijeljenje':
+				rezultat = broj1 / broj2;
+				break;
+        case 'sinus':
+				rezultat = Math.sin(broj1);
+				break;
+        case 'kosinus':
+				rezultat = Math.cos(broj1);
+				break;
+        case 'tangens':
+				rezultat = Math.tan(broj1);
+				break;
+        case 'ln':
+				rezultat = Math.log(broj1);
+				break;
+        case 'log':
+				rezultat = Math.log10(broj1);
+				break;
+        case 'kvadriranje':
+				rezultat = Math.pow(broj1, 2);
+				break;
+        case 'kubiranje':
+				rezultat = Math.pow(broj1, 3);
+				break;
+        case 'potenciranje':
+				rezultat = Math.pow(broj1, broj2);
+				break;
+        default:
+				return;
+      }
+
+     alert('Rezultat: ' + rezultat);
+    }
+  </script>
+</body>
+</html>

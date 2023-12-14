@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 2.</title>
+</head>
+<body>
+  <button onclick="promijeniPozadinu()">Promijeni pozadinu</button>
+  <p id="trenutnaBoja"></p>
+
+  <script type="text/javascript">
+  
+    function randomPozadina() {
+      
+      return '#' + Math.floor(Math.random()* 16777215).toString(16).padStart(6, '0');
+    }
+
+    function promijeniPozadinu() {
+      var novaPozadina = randomPozadina();
+      document.body.style.backgroundColor = novaPozadina;
+      document.getElementById('trenutnaBoja').innerHTML = 'Trenutna boja: ' + novaPozadina;
+    }
+  </script>
+</body>
+</html>

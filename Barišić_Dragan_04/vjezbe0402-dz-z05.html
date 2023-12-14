@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 5.</title>
+</head>
+<body>
+  <form id="registracijaForm">
+    <label>Unesite registracijsku oznaku (X00–X–000): </label>
+    <input type="text" id="registracijskaOznaka" name="registracijskaOznaka">
+    <button type="button" onclick="validacija()">Validiraj</button>
+  </form>
+
+  <script type="text/javascript">
+  
+    function validacija() {
+	
+      var registracijskaOznaka = document.getElementById('registracijskaOznaka').value;
+      
+      var provjera = /^[A-Z]\d{2}-[A-Z]-\d{3}$/;
+      
+      var ispravnost = provjera.test(registracijskaOznaka);
+      
+      if (ispravnost) {
+			alert('Ispravan format registracijske oznake.');
+      } 
+	  else {
+			alert('Neispravan format registracijske oznake.');
+      }
+    }
+  </script>
+</body>
+</html>

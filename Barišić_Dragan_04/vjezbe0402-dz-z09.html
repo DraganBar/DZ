@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 9.</title>
+</head>
+<body>
+  <script type="text/javascript">
+   
+   var stanje = false;
+   
+   function promjeniStanjeZarulje() {
+   
+     var zarulja = document.getElementById("zarulja");
+     var prekidac = document.getElementById("prekidac");
+     var slikaZarulje;
+     var slikaPrekidaca;
+   
+     if (stanje == false) {
+       stanje = true;
+       slikaZarulje = "zarulja_on.png";
+       slikaPrekidaca = "prekidac_on.png";
+     } else {
+       stanje = false;
+       slikaZarulje = "zarulja_off.png";
+       slikaPrekidaca = "prekidac_off.png";
+     }
+	 
+     zarulja.src = slikaZarulje;
+     prekidac.src = slikaPrekidaca;
+   }
+   
+  </script>
+  <img id="prekidac" src="prekidac_off.png" onclick="promjeniStanjeZarulje()">
+  <img id="zarulja" src="zarulja_off.png" >
+  
+</body>
+</html>

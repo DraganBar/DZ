@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 6.</title>
+</head>
+<body>
+  <label>Broj 1:</label>
+  <input type="text" id="broj1"/><br><br>
+
+  <label>Broj 2:</label>
+  <input type="text" id="broj2"/><br><br>	
+
+  <button onclick="zbroji()">Zbroji</button><br><br>
+
+  <label>Rezultat:</label>
+  <input type="text" id="rezultat"/>
+
+  <script type="text/javascript">
+  
+    function zbroji() {
+	
+      var broj1 = parseFloat(document.getElementById('broj1').value);
+      var broj2 = parseFloat(document.getElementById('broj2').value);
+
+      if (isNaN(broj1) || isNaN(broj2)) {
+        alert('Unesite ispravne brojeve');
+        return;
+      }
+	  
+      var rezultat = broj1 + broj2;
+
+      document.getElementById('rezultat').value = rezultat;
+    }
+  </script>
+</body>
+</html>

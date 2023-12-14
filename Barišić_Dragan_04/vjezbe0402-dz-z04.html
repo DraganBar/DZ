@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 4.</title>
+</head>
+<body>
+  <form id="Ocjene">
+    <p>Unesite ocjenu (od 1 do 5): </p>
+    <input type="number" id="ocjena" name="ocjena"/>
+    <input type="button" value="Ispis ocjene" onclick="ispisOcjene()" />
+  </form>
+
+	<p id="rezultat"></p>
+	,
+  <script type="text/javascript">
+  
+    function ispisOcjene() {
+	
+      var pomOcjena = document.getElementById("ocjena");
+      var ocjena = pomOcjena.value;
+
+      if (ocjena >= 1 && ocjena <= 5) {
+        switch (parseInt(ocjena)) {
+          case 1:
+				unesenaOcjena("Nedovoljan");
+				break;
+          case 2:
+				unesenaOcjena("Dovoljan");
+				break;
+          case 3:
+				unesenaOcjena("Dobar");
+				break;
+          case 4:
+				unesenaOcjena("Vrlo dobar");
+				break;
+          case 5:
+				unesenaOcjena("Odličan");
+				break;
+          default:
+				break;
+        }
+      } 
+	  else {
+					alert("Unesite ocjenu od 1 do 5.");
+      }
+    }
+
+    function unesenaOcjena(rez) {
+      var rezultat = document.getElementById("rezultat");
+	  rezultat.innerHTML = 'Ocjena: ' + rez;
+
+    }
+  </script>
+</body>
+</html>

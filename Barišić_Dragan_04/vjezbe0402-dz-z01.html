@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 1.</title>
+</head>
+<body>
+  <script type="text/javascript">
+    
+    function aritmeticka_sredina(brojevi) {
+	
+	  var i = 0;
+      var zbroj = 0;
+      for (i = 0; i < brojevi.length; i++) {
+        zbroj += parseFloat(brojevi[i]);
+      }
+      return zbroj / brojevi.length;
+    }
+
+    function geometrijska_sredina(brojevi) {
+	  
+	  var i = 0;
+      var mnozitelj = 1;
+      for (i = 0; i < brojevi.length; i++) {
+        mnozitelj *= parseFloat(brojevi[i]);
+      }
+      return Math.pow(mnozitelj, 1 / brojevi.length);
+    }
+
+    var input = prompt("Unesite brojeve odvojene zarezom, npr. 1, 4, 16	");
+    var brojevi = input.split(",");
+    	
+    document.write("Aritmetička sredina: " + aritmeticka_sredina(brojevi).toFixed(2) + "<br/>");
+    document.write("Geometrijska sredina: " + geometrijska_sredina(brojevi).toFixed(2));
+
+  </script>
+</body>
+</html>

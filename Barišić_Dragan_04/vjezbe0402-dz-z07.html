@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zadatak 7.</title>
+</head>
+<body>
+  <form id="Form">
+    <label>Unesite dan (01-31):</label>
+    <input type="text" id="dan"/><br><br>
+
+    <label>Unesite mjesec (01-12):</label>
+    <input type="text" id="mjesec" /><br><br>
+
+    <label>Unesite godinu (npr. 1970):</label>
+    <input type="text" id="godina" /><br><br>
+
+    <button type="button" onclick="izracunajStarost()">Izračunaj</button>
+  </form>
+
+  <script type="text/javascript">
+    function izracunajStarost() {
+	
+      var dan = document.getElementById('dan').value;
+      var mjesec = document.getElementById('mjesec').value;
+      var godina = document.getElementById('godina').value;
+
+      if (!provjeraDatuma(dan, mjesec, godina)) {
+        alert("Unesite ispravan datum, mjesec i godinu.");
+        return;
+      }
+
+      var dob = new Date(godina, mjesec - 1, dan);
+      var trenutnaGodina = new Date().getFullYear();
+      var starost = trenutnaGodina - dob.getFullYear();
+
+      if (dob.getMonth() > new Date().getMonth() ||
+          (dob.getMonth() === new Date().getMonth() && dob.getDate() > new Date().getDate())) {
+        starost--;
+      }
+
+      alert("Imate: " + starost + " godina.");
+    }
+
+    function provjeraDatuma(dan, mjesec, godina) {
+      var ispravnostDana = parseInt(dan) >= 1 && parseInt(dan) <= 31;
+      var ispravnostMjeseca = parseInt(mjesec) >= 1 && parseInt(mjesec) <= 12;
+      var ispravnostGodine = parseInt(godina) >= 1900 && parseInt(godina) <= 2023;
+
+      return ispravnostDana && ispravnostMjeseca && ispravnostGodine;
+    }
+  </script>
+</body>
+</html>
